@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dtdacglhwenpq"]
+
+[ext_resource type="PackedScene" uid="uid://bl7u51eq560c3" path="res://PlaceholderJim.glb" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://cb13cblpx74c6" path="res://Player.cs" id="1_onrkg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4flbx"]
+size = Vector3(2.5761719, 7.142578, 1.7565918)
+
+[node name="Player" type="CharacterBody3D" unique_id=1428210035]
+script = ExtResource("1_onrkg")
+
+[node name="Pivot" type="Node3D" parent="." unique_id=1401414010]
+
+[node name="PlaceholderJim" parent="Pivot" unique_id=682678893 instance=ExtResource("1_4flbx")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.3491182, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1382397215]
+transform = Transform3D(1.575, 0, 0, 0, 1.575, 0, 0, 0, 1.575, 0, 6.1429687, 0)
+shape = SubResource("BoxShape3D_4flbx")
