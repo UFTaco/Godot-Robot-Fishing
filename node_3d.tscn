@@ -18,16 +18,17 @@ directional_shadow_fade_start = 0.58
 directional_shadow_max_distance = 1074.5
 
 [node name="Player" parent="." unique_id=1428210035 instance=ExtResource("1_a202f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.312796, 8.991768, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13961983, 8.991768, 0)
+Sensitivity = 75
 
 [node name="cameraPivot" type="Marker3D" parent="Player" unique_id=562328445]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.056153297, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.576638, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player/cameraPivot" unique_id=1378976569]
 transform = Transform3D(1, 0, 0, 0, 0.9396927, 0.34202015, 0, -0.34202015, 0.9396927, 0, 12.701827, 11.76886)
 
 [node name="test enviornment1" parent="." unique_id=1195172374 instance=ExtResource("2_noarx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33395123, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02294159, -0.4498818, -0.15395069)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="test enviornment1" unique_id=1998020035]
 

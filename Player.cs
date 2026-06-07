@@ -1,4 +1,5 @@
 using Godot;
+using System;
 
 public partial class Player : CharacterBody3D
 {
@@ -11,12 +12,18 @@ public partial class Player : CharacterBody3D
 	[Export]
 	public int JumpImpulse { get; set; } = 50;
 
+	[Export]
+	public int Sensitivity { get; set; } = 100;
 	private Vector3 _targetVelocity = Vector3.Zero;
+
 
 	public override void _PhysicsProcess(double delta)
 	{
 
 		var direction = Vector3.Zero;
+
+		// Moving the character
+		Velocity = _targetVelocity;
 
 		if (Input.IsActionPressed("move_right"))
 		{
@@ -55,8 +62,17 @@ public partial class Player : CharacterBody3D
 			_targetVelocity.Y -= FallAcceleration * (float)delta;
 		}
 
-		// Moving the character
-		Velocity = _targetVelocity;
 		MoveAndSlide();
+	}
+
+	public override void _Input(InputEvent @event)
+	{
+		if (@event is InputEventMouseMotion mouseMotion)
+		{
+			GD.Print("Mouse motion: " + mouseMotion.Relative);
+			//GetNode<Node3D>("Pivot").RotateX(Mathf.DegToRad(-mouseMotion.Relative.Y * Sensitivity * (float)GetProcessDeltaTime()));
+			RotateY(Mathf.DegToRad(-mouseMotion.Relative.X * Sensitivity * (float)GetProcessDeltaTime()));
+			
+		}
 	}
 }
