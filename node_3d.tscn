@@ -33,7 +33,7 @@ directional_shadow_fade_start = 0.58
 directional_shadow_max_distance = 1074.5
 
 [node name="Player" parent="." unique_id=1428210035 instance=ExtResource("1_a202f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.991768, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.312796, 8.991768, 0)
 
 [node name="cameraPivot" type="Marker3D" parent="Player" unique_id=562328445]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.056153297, 0)
