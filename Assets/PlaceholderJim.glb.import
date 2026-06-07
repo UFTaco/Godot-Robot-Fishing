@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bl7u51eq560c3"
-path="res://.godot/imported/PlaceholderJim.glb-4e342b27efe259304ca52d73b7711985.scn"
+path="res://.godot/imported/PlaceholderJim.glb-d794dc0ca690a475179a24c682c9cd81.scn"
 
 [deps]
 
-source_file="res://PlaceholderJim.glb"
-dest_files=["res://.godot/imported/PlaceholderJim.glb-4e342b27efe259304ca52d73b7711985.scn"]
+source_file="res://Assets/PlaceholderJim.glb"
+dest_files=["res://.godot/imported/PlaceholderJim.glb-d794dc0ca690a475179a24c682c9cd81.scn"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bun5781t26gin"]
 
 [ext_resource type="PackedScene" uid="uid://dtdacglhwenpq" path="res://player.tscn" id="1_a202f"]
-[ext_resource type="PackedScene" uid="uid://cg43jaqkbe0e5" path="res://test enviornment1.glb" id="2_noarx"]
+[ext_resource type="PackedScene" uid="uid://cg43jaqkbe0e5" path="res://Assets/test enviornment1.glb" id="2_noarx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a0tk4"]
 size = Vector3(232.68646, 1, 376.77658)
@@ -38,3 +38,5 @@ shape = SubResource("BoxShape3D_a0tk4")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="test enviornment1/StaticBody3D" unique_id=1107222457]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.53956, 0.33395123, -96.16876)
 shape = SubResource("BoxShape3D_r3fl7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="test enviornment1" unique_id=49699439]
