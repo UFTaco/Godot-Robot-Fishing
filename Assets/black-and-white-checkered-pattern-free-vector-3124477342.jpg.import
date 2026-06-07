@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2enrviuwvodt"
-path.s3tc="res://.godot/imported/Face.png-39a8222a405c580edb3c5caced5deb91.s3tc.ctex"
+uid="uid://b02ipapdtq6l8"
+path.s3tc="res://.godot/imported/black-and-white-checkered-pattern-free-vector-3124477342.jpg-bf74128e597b348e2ab1624ea89215af.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Face.png"
-dest_files=["res://.godot/imported/Face.png-39a8222a405c580edb3c5caced5deb91.s3tc.ctex"]
+source_file="res://Assets/black-and-white-checkered-pattern-free-vector-3124477342.jpg"
+dest_files=["res://.godot/imported/black-and-white-checkered-pattern-free-vector-3124477342.jpg-bf74128e597b348e2ab1624ea89215af.s3tc.ctex"]
 
 [params]
 

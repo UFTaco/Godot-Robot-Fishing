@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blcyoq8bhu66s"
-path.s3tc="res://.godot/imported/PlaceholderJim_face.png-c01204f4e98b98e7835bcc632ceed68d.s3tc.ctex"
+uid="uid://d2enrviuwvodt"
+path.s3tc="res://.godot/imported/Face.png-b2eeafed8b9fd2ee64525881cebed0f6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "47846de0afefcbaec356d62b69c6db84"
-}
 
 [deps]
 
-source_file="res://PlaceholderJim_face.png"
-dest_files=["res://.godot/imported/PlaceholderJim_face.png-c01204f4e98b98e7835bcc632ceed68d.s3tc.ctex"]
+source_file="res://Assets/Face.png"
+dest_files=["res://.godot/imported/Face.png-b2eeafed8b9fd2ee64525881cebed0f6.s3tc.ctex"]
 
 [params]
 

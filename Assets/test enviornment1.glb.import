@@ -1,0 +1,100 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cg43jaqkbe0e5"
+path="res://.godot/imported/test enviornment1.glb-5d3ab5c64ab46a53ff8b4c41b925f1e0.scn"
+
+[deps]
+
+source_file="res://Assets/test enviornment1.glb"
+dest_files=["res://.godot/imported/test enviornment1.glb-5d3ab5c64ab46a53ff8b4c41b925f1e0.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Black": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Black.tres",
+"use_external/path": "uid://bcooklbrmmkk8"
+},
+"Brick": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Brick.tres",
+"use_external/path": "uid://pg6ncu6g2ll1"
+},
+"Glass": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Glass.tres",
+"use_external/path": "uid://cckghursux6rj"
+},
+"Light": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Light.tres",
+"use_external/path": "uid://bx8gdwv2ioajx"
+},
+"Material.002": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Material.002.tres",
+"use_external/path": "uid://bnbmrftcpheu8"
+},
+"Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Metal.tres",
+"use_external/path": "uid://32i7ot1n2b7p"
+},
+"Road": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Road.tres",
+"use_external/path": "uid://bhqnjjayn8kn8"
+},
+"Roof": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Roof.tres",
+"use_external/path": "uid://bn7ksiayo3ckn"
+},
+"Screen": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Screen.tres",
+"use_external/path": "uid://cfhs4yx67jgr5"
+},
+"Sidewalk": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Sidewalk.tres",
+"use_external/path": "uid://baa31auq5fvwn"
+},
+"Wood": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Wood.tres",
+"use_external/path": "uid://ds2djb6xdexea"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

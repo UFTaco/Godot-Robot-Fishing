@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b02ipapdtq6l8"
-path.s3tc="res://.godot/imported/black-and-white-checkered-pattern-free-vector-3124477342.jpg-133bd2d5d248a4f064a0e8be60884140.s3tc.ctex"
+uid="uid://blcyoq8bhu66s"
+path.s3tc="res://.godot/imported/PlaceholderJim_face (2).png-1d0079ceac415ebf2fc021c464e2ab7d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "47846de0afefcbaec356d62b69c6db84"
+}
 
 [deps]
 
-source_file="res://black-and-white-checkered-pattern-free-vector-3124477342.jpg"
-dest_files=["res://.godot/imported/black-and-white-checkered-pattern-free-vector-3124477342.jpg-133bd2d5d248a4f064a0e8be60884140.s3tc.ctex"]
+source_file="res://Assets/PlaceholderJim_face (2).png"
+dest_files=["res://.godot/imported/PlaceholderJim_face (2).png-1d0079ceac415ebf2fc021c464e2ab7d.s3tc.ctex"]
 
 [params]
 
