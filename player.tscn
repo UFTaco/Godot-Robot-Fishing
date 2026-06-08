@@ -1,19 +1,25 @@
 [gd_scene format=3 uid="uid://dtdacglhwenpq"]
 
 [ext_resource type="PackedScene" uid="uid://bl7u51eq560c3" path="res://Assets/PlaceholderJim.glb" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://cb13cblpx74c6" path="res://Player.cs" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://o6o6aroo0jqi" path="res://Player.cs" id="1_onrkg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4flbx"]
-size = Vector3(2.5761719, 7.142578, 1.7565918)
+size = Vector3(7.7119446, 22.600863, 6.426874)
 
-[node name="Player" type="CharacterBody3D" unique_id=1428210035]
+[node name="Player" type="CharacterBody3D" unique_id=722736360]
 script = ExtResource("1_onrkg")
 
-[node name="Pivot" type="Node3D" parent="." unique_id=1401414010]
+[node name="PlaceholderJim" parent="." unique_id=1083020271 instance=ExtResource("1_4flbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9070063, 0)
 
-[node name="PlaceholderJim" parent="Pivot" unique_id=682678893 instance=ExtResource("1_4flbx")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.3491182, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1382397215]
-transform = Transform3D(1.575, 0, 0, 0, 1.575, 0, 0, 0, 1.575, 0, 6.1429687, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=172125637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.553026, -0.241)
 shape = SubResource("BoxShape3D_4flbx")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=280012078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.368952, -0.27613258)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=867663964]
+transform = Transform3D(1, 0, 0, 0, 0.9871363, 0.1598812, 0, -0.1598812, 0.9871363, 0, 6.9305553, 23.927296)
+fov = 86.5
+near = 0.057
