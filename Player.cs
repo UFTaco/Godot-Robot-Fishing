@@ -3,76 +3,58 @@ using System;
 
 public partial class Player : CharacterBody3D
 {
-	// How fast the player moves in meters per second.
 	[Export]
-	public int Speed { get; set; } = 50;
-	// The downward acceleration when in the air, in meters per second squared.
+	public float Speed { get; set; } = 5.0f;
 	[Export]
-	public int FallAcceleration { get; set; } = 75;
+	public float JumpVelocity { get; set; } = 4.5f;
 	[Export]
-	public int JumpImpulse { get; set; } = 50;
-
+	public float Gravity { get; set; } = 9.8f;
 	[Export]
-	public int Sensitivity { get; set; } = 100;
-	private Vector3 _targetVelocity = Vector3.Zero;
-
+	public float MouseSensitivity { get; set; } = 1.00f;
 
 	public override void _PhysicsProcess(double delta)
 	{
+		Vector3 velocity = Velocity;
 
-		var direction = Vector3.Zero;
+		// Add the gravity.
+		if (!IsOnFloor())
+		{
+			velocity.Y -= Gravity * (float)delta;
+		}
 
-		// Moving the character
-		Velocity = _targetVelocity;
+		// Handle Jump.
+		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
+		{
+			velocity.Y = JumpVelocity;
+		}
 
-		if (Input.IsActionPressed("move_right"))
-		{
-			direction.X += 1.0f;
-		}
-		if (Input.IsActionPressed("move_left"))
-		{
-			direction.X -= 1.0f;
-		}
-		if (Input.IsActionPressed("move_back"))
-		{
-			direction.Z += 1.0f;
-		}
-		if (Input.IsActionPressed("move_forward"))
-		{
-			direction.Z -= 1.0f;
-		}
-		if (IsOnFloor() && Input.IsActionJustPressed("Jump"))
-		{
-			_targetVelocity.Y = JumpImpulse;
-		}
+		// Get the input direction and handle the movement/deceleration.
+		// As good practice, you should replace UI actions with custom gameplay actions.
+		Vector2 inputDir = Input.GetVector("player_left", "player_right", "player_forward", "player_back");
+		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
 		if (direction != Vector3.Zero)
 		{
-			direction = direction.Normalized();
-			// Setting the basis property will affect the rotation of the node.
-			GetNode<Node3D>("Pivot").Basis = Basis.LookingAt(direction);
+			velocity.X = direction.X * Speed;
+			velocity.Z = direction.Z * Speed;
 		}
-		
-		// Ground velocity
-		_targetVelocity.X = direction.X * Speed;
-		_targetVelocity.Z = direction.Z * Speed;
-
-		// Vertical velocity
-		if (!IsOnFloor()) // If in the air, fall towards the floor. Literally gravity
+		else
 		{
-			_targetVelocity.Y -= FallAcceleration * (float)delta;
+			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+			velocity.Z = Mathf.MoveToward(Velocity.Z, 0, Speed);
 		}
 
+		Velocity = velocity;
 		MoveAndSlide();
 	}
 
-	public override void _Input(InputEvent @event)
-	{
-		if (@event is InputEventMouseMotion mouseMotion)
+    public override void _Input(InputEvent @event)
+    {
+        if (@event is InputEventMouseMotion mouseMotion)
 		{
-			GD.Print("Mouse motion: " + mouseMotion.Relative);
-			//GetNode<Node3D>("Pivot").RotateX(Mathf.DegToRad(-mouseMotion.Relative.Y * Sensitivity * (float)GetProcessDeltaTime()));
-			RotateY(Mathf.DegToRad(-mouseMotion.Relative.X * Sensitivity * (float)GetProcessDeltaTime()));
-			
+			RotateY(-mouseMotion.Relative.X * MouseSensitivity * 0.01f);
+			GetNode<Node3D>("CameraPivot").RotateX(-mouseMotion.Relative.Y * MouseSensitivity * 0.01f);
+			GetNode<Node3D>("CameraPivot").RotateX(Mathf.Clamp(GetNode<Node3D>("CameraPivot").Rotation.X, Mathf.DegToRad(-55), Mathf.DegToRad(40)) - GetNode<Node3D>("CameraPivot").Rotation.X);	
 		}
-	}
+    }
+
 }
