@@ -47,14 +47,14 @@ public partial class Player : CharacterBody3D
 		MoveAndSlide();
 	}
 
-    public override void _Input(InputEvent @event)
-    {
-        if (@event is InputEventMouseMotion mouseMotion)
+	public override void _Input(InputEvent @event)
+	{
+		if (@event is InputEventMouseMotion mouseMotion)
 		{
 			RotateY(-mouseMotion.Relative.X * MouseSensitivity * 0.01f);
 			GetNode<Node3D>("CameraPivot").RotateX(-mouseMotion.Relative.Y * MouseSensitivity * 0.01f);
 			GetNode<Node3D>("CameraPivot").RotateX(Mathf.Clamp(GetNode<Node3D>("CameraPivot").Rotation.X, Mathf.DegToRad(-55), Mathf.DegToRad(40)) - GetNode<Node3D>("CameraPivot").Rotation.X);	
 		}
-    }
+	}
 
 }
