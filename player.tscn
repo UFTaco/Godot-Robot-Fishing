@@ -16,10 +16,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9070063, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.553026, -0.241)
 shape = SubResource("BoxShape3D_4flbx")
 
-[node name="CameraPivot" type="Node3D" parent="." unique_id=280012078]
+[node name="PivotCamera" type="Node3D" parent="." unique_id=280012078]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.368952, -0.27613258)
 
-[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=867663964]
+[node name="SpringCamera" type="SpringArm3D" parent="PivotCamera" unique_id=452200044]
+spring_length = 30.0
+
+[node name="Camera3D" type="Camera3D" parent="PivotCamera/SpringCamera" unique_id=867663964]
 transform = Transform3D(1, 0, 0, 0, 0.9871363, 0.1598812, 0, -0.1598812, 0.9871363, 0, 6.9305553, 23.927296)
 fov = 86.5
 near = 0.057
