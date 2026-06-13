@@ -85,8 +85,8 @@ public partial class Player : CharacterBody3D
 			if (@event is InputEventMouseMotion mouseMotion)
 			{
 				Input.MouseMode = Input.MouseModeEnum.Captured;
-				_pivotCamera.RotateY(mouseMotion.Relative.X * 0.01f);
-				_springCam.RotateX(-mouseMotion.Relative.Y * 0.01f);
+				_pivotCamera.RotateY(mouseMotion.Relative.X * 0.001f);
+				_springCam.RotateX(-mouseMotion.Relative.Y * 0.001f);
 				//_springCam.RotateX(mouseMotion.Relative.Y * 0.01f);
 				//_pivotCamera.SetGlobalRotation(new Vector3(0, _pivotCamera.GetGlobalRotation().Y - mouseMotion.Relative.X * 0.01f, 0));
 	
@@ -94,8 +94,8 @@ public partial class Player : CharacterBody3D
 				if (Input.IsActionPressed("player_forward") || Input.IsActionPressed("player_back") || Input.IsActionPressed("player_left") || Input.IsActionPressed("player_right"))
 				{
 					
-					RotateY(-mouseMotion.Relative.X * 0.01f);
-					_pivotCamera.RotateY(-mouseMotion.Relative.X * 0.01f);
+					RotateY(-mouseMotion.Relative.X * 0.001f);
+					_pivotCamera.RotateY(-mouseMotion.Relative.X * 0.001f);
 
 
 				}

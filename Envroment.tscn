@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://cg43jaqkbe0e5" path="res://Assets/test enviornment1.glb" id="1_kbwgm"]
 [ext_resource type="PackedScene" uid="uid://dtdacglhwenpq" path="res://player.tscn" id="2_31aad"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kbwgm"]
+size = Vector3(26.333344, 31.78978, 144.89261)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_a0tk4"]
 size = Vector3(232.68646, 1, 376.77658)
 
@@ -18,9 +21,13 @@ directional_shadow_fade_start = 0.58
 directional_shadow_max_distance = 1074.5
 
 [node name="test enviornment1" parent="." unique_id=1195172374 instance=ExtResource("1_kbwgm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.90421605, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08816528, -0.90421605, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="test enviornment1" unique_id=1998020035]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="test enviornment1/StaticBody3D" unique_id=1693770115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109.89305, 15.854611, 18.602615)
+shape = SubResource("BoxShape3D_kbwgm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="test enviornment1/StaticBody3D" unique_id=1662413948]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.794, 0.47225642, 33.435)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dtdacglhwenpq"]
 
-[ext_resource type="PackedScene" uid="uid://bl7u51eq560c3" path="res://Assets/PlaceholderJim.glb" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://o6o6aroo0jqi" path="res://Player.cs" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://de74tfq71mku3" path="res://Blendfiles/DefaultDan.fbx" id="2_onrkg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4flbx"]
 size = Vector3(7.7119446, 22.600863, 6.426874)
@@ -9,8 +9,8 @@ size = Vector3(7.7119446, 22.600863, 6.426874)
 [node name="Player" type="CharacterBody3D" unique_id=722736360]
 script = ExtResource("1_onrkg")
 
-[node name="PlaceholderJim" parent="." unique_id=1083020271 instance=ExtResource("1_4flbx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9070063, 0)
+[node name="DefaultDan" parent="." unique_id=474779330 instance=ExtResource("2_onrkg")]
+transform = Transform3D(-2.3888273e-07, 0, 5.465, 0, 5.465, 0, -5.465, 0, -2.3888273e-07, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=172125637]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.553026, -0.241)
